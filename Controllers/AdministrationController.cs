@@ -47,6 +47,16 @@ namespace DSD605MVCSecurityRoles.Controllers
             return View(model);
         }
 
+        //get all the roles - that was easy!
+        [HttpGet]
+        public IActionResult ListRoles()
+        {
+            var roles = roleManager.Roles;
+            return View(roles);
+        }
+
+
+
 
     }
 }
